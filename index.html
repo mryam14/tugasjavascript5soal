@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value="">--Piih Hewan--</option>
+        <option value="panda">Anjing</option>
+        <option value="musang">Burung</option>
+        <option value="kupu-kupu">Kupu-kupu</option>
+        <option value="kura-kura">Kura-kura</option>
+        <option value="katak">Katak</option>
+        <option value="kucing">Kucing</option>
+    </select>
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil() {
+            switch (daftar.value) {
+                case "panda":
+                    hasil.innerHTML = '<img src="anjing.jpg" alt="">'
+                    alert("ini adalah gambar anjing.jpg")
+                    break;
+
+                case "musang":
+                    hasil.innerHTML = '<img src="burung.jpg" alt="">'
+                    alert("ini adalah gambar burung.jpg")
+                    break;
+
+                case "kupu-kupu":
+                    hasil.innerHTML = '<img src="kupu-kupu.jpg" alt="">'
+                    alert("ini adalah gambar kupu-kupu.jpg")
+                    break;
+
+                case "kura-kura":
+                    hasil.innerHTML = '<img src="kura-kura.jpg" alt="">'
+                    alert("ini adalah gambar kura-kura.jpg")
+                    break;
+
+                case "katak":
+                    hasil.innerHTML = '<img src="katak.webp" alt="">'
+                    alert("ini adalah gambar katak.webp")
+                    break;
+
+                case "kucing":
+                    hasil.innerHTML = '<img src="kucing.jpg" alt="">'
+                    alert("ini adalah gambar kucing.jpg")
+                    break;
+
+                default:
+                    hasil.innerHTML = "PILIH GAMBARNYA GAES"
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
